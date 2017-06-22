@@ -1,0 +1,20 @@
+﻿@using CarShop.Mvc.Common.Models.Meta;
+
+@{
+    var metaTags = ViewData["MetaTags"] as MetaTags;
+    if (metaTags != null)
+    {
+        // Do the tags
+        <meta name="description" content="@metaTags.Description" />
+        <meta name="keywords" content="@metaTags.Keywords" />
+        <meta name="image" content="@metaTags.ImageUrls.FirstOrDefault()" />
+        <meta property="og:site_name" content="Car Shop Ltd." />
+        <meta property="og:title" content="@metaTags.Title" />
+        <meta property="og:description" content="@metaTags.Description" />
+        <meta property="og:language" content="@metaTags.Language" />
+        foreach (var url in metaTags.ImageUrls)
+        {
+            <meta property="og:image" content="@url" />
+        }
+    }
+}

@@ -1,0 +1,17 @@
+﻿@{
+    @using CarShop.Mvc.Common.Components
+    var mdl = Model as PaginationModel;
+}
+<div class="pagination">
+    <div class="row">
+        <div class="col-xs-4">
+            <a class="btn btn-primary" href="?page=@mdl.PreviousPage">Previous</a>
+        </div>
+        <div class="col-xs-4">
+            <p>Page: @mdl.CurrentPage</p>
+        </div>
+        <div class="col-xs-4">
+            <a class="btn btn-primary" href="?page=@mdl.NextPage">Next</a>
+        </div>
+    </div>
+</div>

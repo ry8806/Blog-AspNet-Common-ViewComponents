@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using CarShop.Mvc.Common.Components;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.FileProviders;
+using CarShop.Mvc.Common.Components;
 using System.Reflection;
 
-namespace CarShop.Web
+namespace CarShop.Blog
 {
     public class Startup
     {
